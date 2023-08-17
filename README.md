@@ -5,33 +5,60 @@
 ## Team members
 
 	- Gerardo Peña Pérez A01701474
-	- Carlos Alberto Hurtado Sanchez A01700885
 	- Kevin Joan Delgado Pérez A01706328
 	- Wenguang hu A01706648
+---------------------------------------------------------------------------------------------------------------------------------------------------
+### Corrections after feedback:
+- Feedback for Reto Documentation:
+	- Now all the documents are in a single language
+	- Every phase of the process has documentation
+	- We organized the repository in folders to facilitate navigation
+- Feedback for Reto Datos:
+	- We specify what the selected tools will be used for
+	- We defined a storage model for the datasets
+	- We made a process of cross-validation for the selected model
+	- We added more reasons of why we do not consider our data as bigdata
+- Feedback for Privacidad:
+	- Added references
+- Feedback for Reto Modelo y Refinamiento:
+	- We made a benchmark model
+	- We selected a model
+	- We tuned the model to get a better performance 
+- Feedback for Reto Evaluación:
+	- We added new metrics to be sure that the model meets the success criteria and interpret the results
+	- Added a confusion matrix
+	- Added cross-validation
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 CRISP-DM phases:
-https://github.com/ai-concentration/udd-telefonica-challenge/blob/GerardoA01701474-patch-1/Diagrama_CRISPDM.png
+https://github.com/ai-concentration/udd-telefonica-challenge/blob/GerardoA01701474_possibles_branch/CRISPDM_diagram.png
 
 - At the beginning, we wanted to generate clusters in order to classify between types of trips (type of transportation, reason of the trip, etc.)
 but we decided not to train a k-means model due to scatter plots indicating the presence of messy and dense single chunks instead of the expected and desired  clusters
-
+- Then we realised that the information we were using was not enough so added some new data and start a new iteration in the crisp DM process
+ 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-## Feedback: Reto Documentation
-https://drive.google.com/drive/folders/1p9R4YdBi9gdW8mukZyk7JRWFNDUAqrAt?usp=share_link
+## Reto Documentation
+https://drive.google.com/drive/folders/12ECv0qVQ6qV_3E2VJsSBZK5w1__2-KaN?usp=share_link 
 Inside the folder called CRISP-DM in Reto2 you will find new folders:
-
+- Business Understanding:
+	- Contains the business objectives and data mining objectives. There is described the success criteria of the project
 - Data Understanding:
 	- Contains all the details of the data used to make new information or inferences of the study cases.
 	- This folder just contains the document with the sections of data understanding and the adjusts with CRISP-DM.
 - Data preparation:
-	- Contains all the process that the team do to get the matrix of origin destiny for count the tracks of the phone_id.
+	- Contains all the process that the team do to get the matrix of origin destiny for count the tracks of the phone_id. And a description of the privacy of the
+	 data in the project
 	- This folder just contains the document with the sections of data preparation and the adjusts with CRISP-DM.
 - Modeling:
 	- Contains information that is relevant for choosing a model to get the objetives of data mining.
 	- This folder just contains the document with the sections of data modeling and the adjusts with CRISP-DM.
+- Evaluation:
+	- Contains the review of the process CRISP_DM, and a list of metrics to detemine if the model is correct
+- Deployment:
+	- Contains the Final Report, the Delivery Plan and the Experience Documentation
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-## Feedback: Reto Security
+## Reto Security
 https://docs.google.com/document/d/19bzXYv0qmKwh5fwQ419PEu9nYqN7SvClEHKyyjYAtAc/edit?usp=sharing
 Inside the Data preparation in Google drive, you will find:
 
@@ -39,7 +66,7 @@ Inside the Data preparation in Google drive, you will find:
 	- Contains information that is relevant the process of security that the team and the socio formador do in terms of propposal to the Reto.
 	- This folder only contains a document with all the points to answer.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-## Feedback: Reto Data
+## Reto Data
 https://docs.google.com/document/d/1OKse4OCg9Cg-0ZdUdqQauTMbn7EcfO73dvcSvLNCciY/edit?usp=sharing
 The Data preparation section includes:
 
@@ -50,7 +77,7 @@ The Data preparation section includes:
 	- Does the project use Big data?
 	
 -----------------------------------------------------------------------------------------------------------------------------------------------
-## Feedback: Reto Metodology 
+## Reto Metodology 
 https://drive.google.com/drive/folders/1p9R4YdBi9gdW8mukZyk7JRWFNDUAqrAt?usp=sharing
 Inside the folder called CRISP-DM in Reto2 you will find:
 
@@ -66,7 +93,7 @@ Inside the folder called CRISP-DM in Reto2 you will find:
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 ## Models2.ipynb
 In this document is a deeper explanation for the models and the decisions taken: 
-https://docs.google.com/document/d/1JN3yrL40wKIZF2NxIs0wxvXpS2e1mmdnepEdiSKPhIA/edit?usp=share_link 
+https://docs.google.com/document/d/1pgwLDv1V6-h7vSdgM25jIhBqqKcpQVv_5Flkflj_zYI/edit?usp=share_link 
 
 This NoteBook has the 4 models generated for the solution for the Reto:
 - 1st Benchmark Model:
@@ -77,9 +104,12 @@ This NoteBook has the 4 models generated for the solution for the Reto:
 	
 - 3th Model:
 	- It is a random forest. We went for a different approach and used a machine learning architecture, it gave us better results, but still not good enough
-- last and selected model:
+- 4th Model:
 	- It is a decision tree with XGBoost. With this model we got the higher accuracy score, and after several metrics we decided that this is a good solution
 	for the problem we want to solve
+- Last and selected Model:
+	- It is a similar architecture than the previous model, but with some tuning in the hyperparameters and using a dataset with more information 
+	(amount of recreation centers and population of each comuna)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
